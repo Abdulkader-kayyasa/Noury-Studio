@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" /> 
+
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <nav class="navbar" > 
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>            
+        <img class="logo" src="img/Logo-Wide.png" width="150px"> 
+           
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a  class="nav-links" href="#home">Home</a>
+            </li>
+               
+            <li>
+                <a  class="nav-links" href="#aboutus">About Us</a>
+            </li>
+            <li>
+                <a  class="nav-links" href="#features">Our Features</a>
+            </li> 
+                
+            <li>
+                <a  class="nav-links" href="#survices">Services</a>
+            </li>
+
+            <li>
+                <a  class="nav-links" href="#plans">Plans</a>
+            </li>
+
+            
+
+            <li>
+                <a  class="nav-links" href=" #contactus">Contact Us</a>
+            </li>
+            
+            <li>
+                <a  class="nav-links" href="#joinus" >Join Us</a>
+            </li>
+                
+        </ul>
+    </nav>
+    <!--  ///       HEADER      ///  -->
+    
+    <header>
+        <img src="img/Noury studio logo full.png" alt="" >
+        
+           
+           
+            
+            <hr class="line"> 
+            
+    </header>
+    <!-- ///////// contact form /////////////// -->
+    <div class = "frame">
+        <div id = "button_open_envelope">Email me</div>
+        <div class = "message">
+            <form id="contact-form"
+            method="POST"
+            action="send"
+            enctype="multipart/form-data">
+                <input type="text" name="name" id="name" placeholder=" Name* " required>
+                    
+                <input type="email" name="email" id="email" placeholder=" Email* " required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$">
+                        
+                <input type="text" name="phone" id="phone" placeholder=" Phone (optional)" autofocus> 
+                        
+                <textarea name="message" id="messarea" placeholder=" Message* " required></textarea>
+                    
+                <input type="text" name="address" id="address" style="display: none;">
+                <input type="submit" value="Send" id="send">
+            </form>
+        </div>
+        <div class = "bottom"></div>			
+        <div class = "left"></div>
+        <div class = "right"></div>
+        <div class = "top"></div>
+    </div>
+        
+    
+
+     <!-- ////////////////footer/////////// -->
+     <footer class="footer">
+        <hr class="full_line">
+        <nav class="footer-nav">
+            <ul class="main-nav " >
+                <li>
+                    <a  class="nav-links footer-links" href="#home">Home</a>
+                </li>
+                   
+                <li>
+                    <a  class="nav-links footer-links" href="#aboutus">About Us</a>
+                </li>
+                    
+                <li>
+                    <a  class="nav-links footer-links" href="#survices">Survices</a>
+                </li>
+    
+                <li>
+                    <a  class="nav-links footer-links" href="#plans">Plans</a>
+                </li>
+    
+                <li>
+                    <a  class="nav-links footer-links" href="#contactus">Contact Us</a>
+                </li> 
+    
+                <li>
+                    <a  class="nav-links footer-links" href="#joinus">Join Us</a>
+                </li>
+                
+                <li>
+                    <a  class="nav-links footer-links" href="#AR" >AR</a>
+                </li>
+                    
+            </ul>
+        </nav>
+        <div class="footer-content">
+            <div class="footer-logo"><img src="img/Noury studio logo full.png" alt="" width="100%"></div>
+            
+            <p style="color: white;"> the first Online Media Agency in Syria . </p>
+            
+        </div>
+        <hr>
+        <div class="wrapper">
+            <div class="social-icons">
+                <a class="social-icon twitter" href="https://twitter.com/anronkai" target="_blank" rel="author">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="social-icon instagram" href="https://instagram.com/anronkai" target="_blank" rel="author">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon linkedin" href="https://instagram.com/anronkai" target="_blank" rel="author">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a class="social-icon facebook" href="https://instagram.com/anronkai" target="_blank" rel="author">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <p style="text-align: center; color: white; ">NouryStudio - 2020 © All rights reserved</p>
+    </footer>
+
+    <script type="text/javascript"     src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+     
+            emailjs.init("user_wofB1JRPzkJHUKYgubVac");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                // this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+        
+                emailjs.sendForm('service_3mkeprc', 'template_36dg669', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

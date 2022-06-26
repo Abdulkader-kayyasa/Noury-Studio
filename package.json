@@ -1,0 +1,23 @@
+{
+  "name": "noury-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "emailjs-com": "^2.6.4",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.18.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "abdulkaderkayasseh",
+  "license": "ISC"
+}
